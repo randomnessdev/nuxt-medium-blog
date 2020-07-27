@@ -15,11 +15,6 @@ Vue.mixin({
       slug = slug.replace(/\s*$/g, '');
       slug = slug.replace(/\s+/g, '-');
       return slug;
-    },
-    UnSanitize(string) {
-      let slug = "";
-      slug = string.replace(/\-/gi, ' ');
-      return slug;
     }
   }
 })

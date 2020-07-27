@@ -6,11 +6,6 @@
 
 <script>
 export default {
-  head () {
-    return {
-      title: 'Prismic Nuxt.js Multi Page Website',
-    }
-  },
   async middleware({ store }) {
     await store.dispatch("fetchIdeas");
   }
