@@ -41,6 +41,9 @@ export default {
   modules: [
     '@nuxt/http'
   ],
+
+  target: 'static',
+
   /*
   ** Build configuration
   */
