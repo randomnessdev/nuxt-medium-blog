@@ -1,6 +1,6 @@
 # nuxt-blog-medium
 
-> Nuxt Blog using Medium feed
+> Nuxt full static Blog using Medium feed
 
 ## Build Setup
 
