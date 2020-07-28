@@ -10,7 +10,7 @@
       <BlogWidget />
       <div class="links">
         <a
-          href="https://nuxtjs.org/"
+          href="https://medium.com/@randomnessdev/nuxt-static-blog-using-medium-as-a-headless-cms-6b367e3e50da?sk=72cde58a254b3b931c2346e4bd19880d"
           target="_blank"
           class="button--green"
         >
