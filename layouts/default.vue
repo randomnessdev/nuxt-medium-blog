@@ -7,7 +7,7 @@
 <script>
 export default {
   async middleware({ store }) {
-    await store.dispatch("fetchIdeas");
+    await store.dispatch("fetchPosts");
   }
 };
 </script>

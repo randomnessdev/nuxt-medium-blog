@@ -14,10 +14,10 @@
           target="_blank"
           class="button--green"
         >
-          Documentation
+          Medium article
         </a>
         <a
-          href="https://github.com/nuxt/nuxt.js"
+          href="https://github.com/randomnessdev/nuxt-medium-blog/"
           target="_blank"
           class="button--grey"
         >

@@ -37,12 +37,11 @@
 </template>
 
 <script>
-// Imports for Prismic Slice components
 export default {
-  name: "page",
+  name: "post",
   head() {
     return {
-      title: "Prismic Nuxt.js Multi Page Website",
+      title: this.post.title + ' | Nuxt Medium Blog'
     };
   },
   data() {
@@ -55,6 +54,7 @@ export default {
       this.$store.state.posts.forEach((post) => {
         if (this.Sanitize(post.title) == this.$route.params.uid) {
           this.post = post;
+          this.title = post.title;
         }
       });
     },
@@ -64,6 +64,7 @@ export default {
   },
 };
 </script>
+
 <style lang="sass">
 .post-container
   display: flex
@@ -80,7 +81,20 @@ export default {
   text-rendering: optimizeLegibility
   -webkit-font-smoothing: antialiased
   h1
-    margin-bottom: 0
+    font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+    font-style: normal
+    font-weight: 400
+    line-height: 1.25
+    letter-spacing: 0
+    font-size: 42px
+  h3
+    font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif
+    font-weight: 600
+    font-size: 30px
+    line-height: 1.15
+    letter-spacing: -.015em
+    color: rgba(0,0,0,.84)
+    margin-top: 56px
   .date-share
     display: flex
     justify-content: space-between
@@ -106,7 +120,11 @@ export default {
     margin: 1em 1em .5em -25%
     img
       max-width: 100%
-  p, h2,h3,h4
-
+  p
     margin: 1em 0
+  a
+    color: inherit
+    &:hover
+      opacity: .7
+      transition: opacity .25s
 </style>

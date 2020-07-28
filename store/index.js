@@ -4,7 +4,7 @@ export const state = () => ({
 })
 
 export const mutations = {
-  SET_IDEAS(state, posts) {
+  SET_POSTS(state, posts) {
     state.posts = posts
   },
   SET_ERROR(state, error) {
@@ -13,11 +13,11 @@ export const mutations = {
 }
 
 export const actions = {
-  async fetchIdeas({ commit }) {
+  async fetchPosts({ commit }) {
     try {
-      let blogPosts = await this.$http.$get('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@randomnessdev')
-      blogPosts = blogPosts.items
-      commit('SET_IDEAS', blogPosts)
+      let posts = await this.$http.$get('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@randomnessdev')
+      posts = posts.items
+      commit('SET_POSTS', posts)
     } catch (e) {
       const error = 'Please create an Idea post'
       commit('SET_ERROR', error);
