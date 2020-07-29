@@ -42,7 +42,7 @@ export default {
       });
     },
   },
-  beforeMount() {
+  created() {
     this.getPost();
   },
 };
@@ -90,6 +90,7 @@ export default {
       outline: 0
       opacity: .5
       transition: opacity .25s
+      padding: .25em
       &:hover
         opacity: 1
         cursor: pointer
