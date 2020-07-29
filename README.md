@@ -4,7 +4,8 @@
 
 > Nuxt full static blog using Medium feed
 
-[Medium article](https://medium.com/@randomnessdev/nuxt-static-blog-using-medium-as-a-headless-cms-6b367e3e50da)
+- [Medium article](https://medium.com/@randomnessdev/nuxt-static-blog-using-medium-as-a-headless-cms-6b367e3e50da)
+- [Live demo](https://nuxt-medium-blog.netlify.app/)
 
 ## Build Setup
 
