@@ -1,41 +1,34 @@
 <template>
   <div class="container">
     <div>
-      <h1 class="title">
-        Nuxt Medium Blog
-      </h1>
-      <h2 class="subtitle">
-        Nuxt static Blog using Medium RSS
-      </h2>
+      <h1 class="title">Nuxt Medium Blog</h1>
+      <h2 class="subtitle">Nuxt full static Blog using Medium RSS</h2>
+      <h3 class="latest">Latest articles:</h3>
       <BlogWidget />
       <div class="links">
         <a
           href="https://medium.com/@randomnessdev/nuxt-static-blog-using-medium-as-a-headless-cms-6b367e3e50da?sk=72cde58a254b3b931c2346e4bd19880d"
           target="_blank"
           class="button--green"
-        >
-          Medium article
-        </a>
+        >Medium article</a>
         <a
           href="https://github.com/randomnessdev/nuxt-medium-blog/"
           target="_blank"
           class="button--grey"
-        >
-          GitHub
-        </a>
+        >GitHub</a>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import BlogWidget from '~/components/BlogWidget.vue'
+import BlogWidget from "~/components/BlogWidget.vue";
 export default {
-  layout: 'default',
+  layout: "default",
   components: {
-    BlogWidget
+    BlogWidget,
   },
-}
+};
 </script>
 
 <style>
@@ -44,13 +37,13 @@ export default {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   text-align: center;
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+.title, .latest {
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;
@@ -67,6 +60,15 @@ export default {
 }
 
 .links {
-  padding-top: 15px;
+  padding-top: 45px;
+}
+h3.latest {
+  margin-top: 4em;
+  text-align: left;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: .125em;
+
 }
 </style>
