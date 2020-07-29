@@ -68,5 +68,9 @@ export default {
 };
 </script>
 
-<style>
+<style lang="sass">
+  .share
+    display: flex
+    button
+      display: flex
 </style>

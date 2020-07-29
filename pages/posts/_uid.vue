@@ -4,6 +4,8 @@
     <h1>{{ post.title }}</h1>
     <div class="date-share">
       <div class="date">{{ post.pubDate }}</div>
+      <a :href="link" class="read-link" target="_blank">Read on Medium</a>
+      <span class="divider"> | </span>
       <SocialShare :post="post" />
     </div>
     <article v-html="post.content" />
@@ -26,6 +28,7 @@ export default {
   data() {
     return {
       post: {},
+      link: ''
     };
   },
   methods: {
@@ -34,6 +37,7 @@ export default {
         if (this.Sanitize(post.title) == this.$route.params.uid) {
           this.post = post;
           this.title = post.title;
+          this.link = post.link;
         }
       });
     },
@@ -89,11 +93,16 @@ export default {
       &:hover
         opacity: 1
         cursor: pointer
-  .date
+  span.divider
+    margin: 0 1em
+    font-size: .75em
+  .date, .read-link
     color: rgba(117, 117, 117, 1)
     font-size: 14px
     line-height: 20px
     font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif
+  .read-link
+    margin-left: auto
   figure
     margin: 2.5em 0
     img
