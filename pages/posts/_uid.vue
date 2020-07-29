@@ -41,7 +41,7 @@ export default {
   name: "post",
   head() {
     return {
-      title: this.post.title + ' | Nuxt Medium Blog'
+      title: this.post.title + " | Nuxt Medium Blog",
     };
   },
   data() {
@@ -81,7 +81,7 @@ export default {
   text-rendering: optimizeLegibility
   -webkit-font-smoothing: antialiased
   h1
-    font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+    font-family: Georgia,Cambria,"Times New Roman",Times,serif
     font-style: normal
     font-weight: 400
     line-height: 1.25
@@ -94,7 +94,8 @@ export default {
     line-height: 1.15
     letter-spacing: -.015em
     color: rgba(0,0,0,.84)
-    margin-top: 56px
+    &:not(:first-child)
+      margin-top: 56px
   .date-share
     display: flex
     justify-content: space-between
@@ -113,13 +114,33 @@ export default {
     color: rgba(117, 117, 117, 1)
     font-size: 14px
     line-height: 20px
-    font-family: medium-content-sans-serif-font, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif
   figure
-    float: left
-    width: 75%
-    margin: 1em 1em .5em -25%
+    margin: 2.5em 0
     img
       max-width: 100%
+    figcaption
+      text-align: center
+      font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif
+      color: rgba(117, 117, 117, 1)
+      font-size: .65em
+  pre
+    white-space: pre-wrap
+    font-size: .75em
+    color: rgba(41, 41, 41, 1)
+    background: rgba(242, 242, 242, 1)
+    padding: 20px
+    font-family: Menlo, Monaco, "Courier New", Courier, monospace
+    letter-spacing: -0.022em
+    line-height: 1.21
+    margin: 3em 0
+  blockquote
+    padding-left: 23px
+    box-shadow: inset 3px 0 0 0 rgba(41, 41, 41, 1)
+    margin: 2em 0
+    font-style: italic
+    letter-spacing: -0.003em
+    color: rgba(41, 41, 41, 1)
   p
     margin: 1em 0
   a

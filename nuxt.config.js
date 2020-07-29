@@ -39,7 +39,8 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    '@nuxt/http'
+    '@nuxt/http',
+    'vue-social-sharing/nuxt'
   ],
 
   target: 'static',
